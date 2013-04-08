@@ -1,14 +1,11 @@
 cmake_minimum_required(VERSION 2.6)
 
-project(colorBeep2)
+project(eyeborg)
 
 find_package(OpenCV REQUIRED)
 
-add_executable(colorBeep2 colorBeep2.cpp)
-target_link_libraries(colorBeep2 ${OpenCV_LIBS})
+add_executable(eyeborg eyeborg_norec.cpp)
+target_link_libraries(eyeborg ${OpenCV_LIBS})
 
-add_executable(captureExample captureExample.cpp)
-target_link_libraries(captureExample ${OpenCV_LIBS})
-
-add_executable(videoWriter videoWriter.cpp)
-target_link_libraries(videoWriter ${OpenCV_LIBS})
+add_executable(webcam webcam.cpp)
+target_link_libraries(webcam ${OpenCV_LIBS})
